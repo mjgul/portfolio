@@ -1,0 +1,118 @@
+.photo-container{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 34% 64% 77% 26% / 73% 54% 45% 19%;
+    animation: blobAnimation 10s ease-in-out infinite;
+    border: 1px solid;
+    }
+}
+.personal-info{
+  display: flex;
+
+  line-height: 35px;
+  padding:100px 200px 0px 50px;
+  .top{
+    display: flex;
+  }
+}
+.dynamic-word{
+  color: green;
+  box-shadow: -7px 0px 0px 0px;
+  margin-left: 13px;
+  padding-left: 12px;
+
+}
+
+.green-background{
+  background-color: green;
+  padding-left: 1px;
+  padding-right: 1px;
+  box-shadow: 3px 2px 0px 0px;
+}
+
+.para-info{
+  width: 50%;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1.5px;
+}
+
+.animated-text {
+  //animation: fadeAnimation 2s ease-in-out infinite;
+
+}
+
+@keyframes fadeAnimation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes floatingBorderAnimation {
+  0%, 100% {
+    border-radius: 10px;
+  }
+  50% {
+    border-radius: 50px;
+  }
+}
+
+
+
+/* word-animation.component.css */
+.animated-text {
+  display: inline-block; /* Ensure each letter is on its own line */
+}
+
+/* Define keyframes for typing animation */
+@keyframes typingAnimation {
+  from {
+    width: 0; /* Start with no width (hidden) */
+  }
+}
+
+/* Apply typing animation with delay for each letter */
+.animated-text::before {
+  content: attr(data-text); /* Get the original text from the attribute */
+  display: inline-block;
+  width: 0; /* Start with no width (hidden) */
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: hidden; /* Hide overflowing text */
+  animation: typingAnimation 0.5s ease-in-out both;
+}
+
+/* Add a delay for each letter */
+.animated-text::before:nth-child(1) { animation-delay: 0.5s; } /* Delay for first letter */
+.animated-text::before:nth-child(2) { animation-delay: 1s; }   /* Delay for second letter */
+/* Add more nth-child rules for each letter */
+/* ... */
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+.highlight{
+  font-weight: 600;
+}
+
+@keyframes blobAnimation {
+  35%, 50% {
+    border-radius: 50%; /* Initial and final border-radius value */
+  }
+  50% {
+    border-radius: 70% 30% 60% 40%; /* Adjust the values to create the blob shape */
+  }
+}
