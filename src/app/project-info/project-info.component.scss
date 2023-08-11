@@ -1,0 +1,51 @@
+.project-info{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 50px;
+}
+.projects-info-container{
+  display: flex;
+}
+.projects{
+  display: flex;
+}
+.project-description{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  //background: orange;
+  border-radius: 20px;
+  margin-left: 30px;
+  align-items: center;
+}
+.project-source{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-col{
+  padding: 50px;
+}
+
+.project-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ion-card-title{
+    padding-top: 20px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+  }
+}
+
+ion-card-content{
+  padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}

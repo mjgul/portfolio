@@ -1,0 +1,28 @@
+.career-info-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 50px;
+    .companies{
+      display: flex;
+      flex-direction: row;
+    }
+}
+.company{
+    height: 300px;
+    width: 400px;
+    //box-shadow: 5px 5px 0px 0px;
+    .icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      height: 100px;
+      object-fit: scale-down;
+    }
+    }
+}
+
+ion-card-subtitle{
+  text-align: center;
+}

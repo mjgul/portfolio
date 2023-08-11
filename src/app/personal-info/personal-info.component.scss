@@ -109,9 +109,10 @@
 }
 
 @keyframes blobAnimation {
-  35%, 50% {
+  35%, 40% {
     border-radius: 50%; /* Initial and final border-radius value */
   }
+
   50% {
     border-radius: 70% 30% 60% 40%; /* Adjust the values to create the blob shape */
   }
