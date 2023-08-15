@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "muhammadgul"
+    "default": "portfolio-9234f"
   },
   "targets": {
     "portfolio-9234f": {
@@ -9,7 +9,7 @@
           "muhammadgul"
         ],
         "portfolio-9234f": [
-          "muhammadgul"
+          "portfolio-9234f"
         ]
       }
     }
