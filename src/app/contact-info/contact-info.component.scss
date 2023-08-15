@@ -10,3 +10,20 @@
 .opacity{
   opacity: .5;
 }
+
+.contact{
+  display: flex;
+  align-items: center;
+  .contact-logo-container{
+    display: flex;
+    padding-right: 5px;
+  }
+}
+ion-col{
+  display: flex;
+    justify-content: center;
+}
+ion-button{
+  width: 125px;
+
+}

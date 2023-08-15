@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "muhammadgul"
+  },
+  "targets": {
+    "portfolio-9234f": {
+      "hosting": {
+        "muhammadgul": [
+          "muhammadgul"
+        ],
+        "portfolio-9234f": [
+          "muhammadgul"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
