@@ -117,3 +117,21 @@
     border-radius: 70% 30% 60% 40%; /* Adjust the values to create the blob shape */
   }
 }
+
+a {
+  text-decoration: none;
+}
+
+.linkedin{
+  display: flex;
+    align-items: center;
+}
+
+.link-linkedin:hover {
+  cursor: pointer;
+}
+
+.link-linkedin{
+  padding-left: 13px;
+
+}
