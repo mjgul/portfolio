@@ -46,8 +46,10 @@
 }
 
 .animated-text {
-  //animation: fadeAnimation 2s ease-in-out infinite;
-
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(18) 1s forwards infinite, cursor 0.4s step-end infinite alternate;
 }
 
 @keyframes fadeAnimation {
@@ -70,11 +72,6 @@
 
 
 
-/* word-animation.component.css */
-.animated-text {
-  display: inline-block; /* Ensure each letter is on its own line */
-}
-
 /* Define keyframes for typing animation */
 @keyframes typingAnimation {
   from {
@@ -82,21 +79,7 @@
   }
 }
 
-/* Apply typing animation with delay for each letter */
-.animated-text::before {
-  content: attr(data-text); /* Get the original text from the attribute */
-  display: inline-block;
-  width: 0; /* Start with no width (hidden) */
-  white-space: nowrap; /* Prevent line breaks */
-  overflow: hidden; /* Hide overflowing text */
-  animation: typingAnimation 0.5s ease-in-out both;
-}
 
-/* Add a delay for each letter */
-.animated-text::before:nth-child(1) { animation-delay: 0.5s; } /* Delay for first letter */
-.animated-text::before:nth-child(2) { animation-delay: 1s; }   /* Delay for second letter */
-/* Add more nth-child rules for each letter */
-/* ... */
 
 .text-container{
   display: flex;
@@ -134,4 +117,21 @@ a {
 .link-linkedin{
   padding-left: 13px;
 
+}
+
+@keyframes cursor {
+  from {border-color: transparent}
+  50% {border-color :transparent}
+  to { border-color: transparent;}
+}
+
+@keyframes typing {
+  to {width:18%}
+}
+
+.application{
+  padding-left: 10px;
+}
+.sub-heading-local{
+  display: flex;
 }
