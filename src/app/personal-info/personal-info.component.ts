@@ -22,24 +22,9 @@ export class PersonalInfoComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.word$ = this.getWordsWithDelay();
+    
 
   }
 
-  getWord(){
-    if(this.currentPlatform === "Mobile"){
-      this.currentPlatform = "Web";
-    } else {
-      this.currentPlatform = "Mobile"
-    }
-    console.log("CURRENT: ", this.currentPlatform);
-  }
 
-  getWordsWithDelay(): Observable<string> {
-    return interval(3000).pipe(
-      take(this.words.length), // Take each word once
-      map(index => this.words[index]), // Map index to word
-      repeat() // Repeat the sequence indefinitely
-    );
-  }
 }
