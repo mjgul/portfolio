@@ -1,17 +1,17 @@
 .photo-container{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 34% 64% 77% 26% / 73% 54% 45% 19%;
+    
+    
+    object-fit: contain;
+    
     animation: blobAnimation 10s ease-in-out infinite;
-    border: 1px solid;
+    border: 3px solid;
     }
 }
 .personal-info{
@@ -91,13 +91,26 @@
 }
 
 @keyframes blobAnimation {
-  35%, 40% {
-    border-radius: 50%; /* Initial and final border-radius value */
-  }
-
-  50% {
-    border-radius: 70% 30% 60% 40%; /* Adjust the values to create the blob shape */
-  }
+  0%,
+    100% {
+      border-radius: 50%;
+      /* Circle shape */
+    }
+  
+    25% {
+      border-radius: 60% 40% 30% 70%;
+      /* Change shape to oval with different radii */
+    }
+  
+    50% {
+      border-radius: 80% 30% 40% 60%;
+      /* Another variation of the oval shape */
+    }
+  
+    75% {
+      border-radius: 60% 50% 50% 60%;
+      /* Another oval variation */
+    }
 }
 
 a {
