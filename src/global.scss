@@ -64,3 +64,12 @@
 .bold{
   font-weight: bold;
 }
+
+
+ion-content {
+  // Explicitly prevent scrolling on the content pane
+  --overflow: hidden;
+  --background: transparent;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}

@@ -34,10 +34,19 @@
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
-              }
+              },
+              {
+              "glob": "**/*.glsl",
+              "input": "src/assets/shaders/",
+              "output": "/assets/shaders/"
+            }
+
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": []
+            "scripts": [
+              "node_modules/p5/lib/p5.js",
+              "node_modules/matter-js/build/matter.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -198,7 +207,10 @@
     }
   },
   "cli": {
-    "schematicCollections": ["@ionic/angular-toolkit"]
+    "schematicCollections": [
+      "@ionic/angular-toolkit"
+    ],
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

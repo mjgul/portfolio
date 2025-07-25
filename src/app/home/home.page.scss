@@ -1,27 +1,90 @@
-#container {
-  text-align: center;
+// Keep this from before
+ion-content {
+  --background: transparent;
+}
 
+// Disable native scrolling since GSAP will handle it
+:host {
+  ion-content {
+    --overflow: hidden;
+  }
+}
+
+:host, body, html {
+  overflow: hidden;
+  overflow-y: hidden; // Prevents the main window scrollbars
+  overflow-x: hidden;
+}
+
+ion-content {
+  // Explicitly prevent scrolling on the content pane
+  --overflow: hidden;
+  --background: transparent;
+}
+
+// Our scroll container no longer needs to scroll itself
+.scroll-container {
   position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 100%;
+  height: 100%; // Make it take up the full screen
+  overflow: hidden; // CRITICAL: This was the source of the problem.
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.scroll-section {
+  width: 100%;
+  // Each section being 100vh high gives us a nice "snap" feel per scroll.
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.html-content {
+  background-color: #f3d9b1; // The tan background color from the video
+  color: #333;
+  padding: 50px 20px;
+  justify-content: flex-start;
+  // Use the same retro font
+  font-family: 'VT323', monospace;
 
-  color: #8c8c8c;
+  .content-block {
+    max-width: 800px;
+    margin-bottom: 50px;
+  }
 
-  margin: 0;
+  .retro-heading {
+    display: inline-block;
+    background-color: #333;
+    color: #f3d9b1;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
 }
 
-#container a {
-  text-decoration: none;
+// ... styles for scroll-container, etc.
+
+.html-content {
+  position: absolute;
+  top: 100%; // START an entire screen height below the top
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3d9b1;
+  color: #333;
+  padding: 50px 20px;
+  overflow-y: auto; // Allow this layer to scroll internally IF its content is too long
+
+  font-family: 'VT323', monospace;
+
+  .content-block { /* ... a-ok */ }
+  .retro-heading { /* ... a-ok */ }
+  p { /* ... a-ok */ }
 }

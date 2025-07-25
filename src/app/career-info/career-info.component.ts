@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-
+import { ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-career-info',
   templateUrl: './career-info.component.html',
@@ -10,9 +10,15 @@ import { IonicModule } from '@ionic/angular';
   imports:[IonicModule,CommonModule]
 })
 export class CareerInfoComponent  implements OnInit {
+  @Input() project: any; // Data is passed in here
+  constructor(private modalCtrl: ModalController) { }
 
-  constructor() { }
+  ngOnInit() {
+    console.log(this.project);
+  }
 
-  ngOnInit() {}
+  dismiss() {
+    this.modalCtrl.dismiss();
+  }
 
 }

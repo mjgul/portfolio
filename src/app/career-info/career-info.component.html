@@ -1,32 +1,18 @@
+<div>
+  <ion-button fill="clear" (click)="dismiss()" class="close-button">
+    <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+  </ion-button>
 
-<div class="career-info-container">
-  <div class="label-container">
-    <ion-label>Companies I worked for</ion-label>
+  <div class="modal-content">
+    <img [src]="project.imageUrl" alt="">
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.description }}</p>
+    <div class="tech-stack">
+      <ion-chip *ngFor="let tech of project.tech">{{ tech }}</ion-chip>
+    </div>
+    <div class="project-links">
+      <ion-button [href]="project.liveUrl" target="_blank">Live Demo <ion-icon slot="end" name="open-outline"></ion-icon></ion-button>
+      <ion-button [href]="project.codeUrl" target="_blank" fill="outline">View Code <ion-icon slot="end" name="logo-github"></ion-icon></ion-button>
+    </div>
   </div>
-  <div class="companies">
-  <ion-card class="company">
-    <div class="icon-container">
-    <img src="assets/icon/syslab technologies.png">
-
-  </div>
-  <ion-card-subtitle>Syslab Technologies</ion-card-subtitle>
-  </ion-card>
-
-  <ion-card class="company">
-    <div class="icon-container">
-    <img src="assets/icon/fresh futures.jpeg">
-
-  </div>
-  <ion-card-subtitle>Fresh Futures</ion-card-subtitle>
-  </ion-card>
-
-  <ion-card class="company">
-    <div class="icon-container">
-    <img src="assets/icon/dm.jpeg">
-
-  </div>
-  <ion-card-subtitle>Digital Mall</ion-card-subtitle>
-  </ion-card>
-</div>
-
 </div>

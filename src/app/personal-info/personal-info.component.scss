@@ -4,12 +4,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     img{
-    
-    
+
+
     object-fit: contain;
-    
+
     animation: blobAnimation 10s ease-in-out infinite;
     border: 3px solid;
     }
@@ -96,17 +96,17 @@
       border-radius: 50%;
       /* Circle shape */
     }
-  
+
     25% {
       border-radius: 60% 40% 30% 70%;
       /* Change shape to oval with different radii */
     }
-  
+
     50% {
       border-radius: 80% 30% 40% 60%;
       /* Another variation of the oval shape */
     }
-  
+
     75% {
       border-radius: 60% 50% 50% 60%;
       /* Another oval variation */

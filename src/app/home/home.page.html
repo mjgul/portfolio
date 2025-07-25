@@ -1,7 +1,42 @@
-<ion-content [fullscreen]="true">
+<!-- The ion-content still acts as our main wrapper -->
+<ion-content [fullscreen]="true" [scrollY]="false" [scrollX]="false"> <!-- Disable native scrolling -->
 
-<app-personal-info></app-personal-info>
-<app-tech-stack></app-tech-stack>
-<app-project-info></app-project-info>
-<app-contact-info></app-contact-info>
+  <!-- Our 3D canvas is still the absolute background -->
+  <app-three-canvas></app-three-canvas>
+
+  <!-- NEW: This is the container for the regular web content -->
+  <!-- It sits ON TOP of the canvas. -->
+  <div class="scroll-container">
+    <section class="scroll-section">
+      <!-- This section is just for space, to trigger the first animation -->
+    </section>
+
+    <section class="scroll-section">
+      <!-- This section is also for space, to trigger the second animation -->
+    </section>
+
+    <section class="scroll-section html-content">
+      <!-- Your actual HTML content goes here -->
+      <div class="content-block">
+        <h2 class="retro-heading">About Me</h2>
+        <p>
+          I am a passionate creative developer with a love for all things
+          technology and design. This portfolio is a showcase of my skills
+          in Angular, Three.js, and interactive WebGL.
+        </p>
+      </div>
+
+      <div class="content-block">
+        <h2 class="retro-heading">Projects</h2>
+        <div class="project-item">
+          <h3>Project One: Data Visualizer</h3>
+          <p>Details about this amazing project...</p>
+        </div>
+        <div class="project-item">
+          <h3>Project Two: Mobile App</h3>
+          <p>Details about another cool project...</p>
+        </div>
+      </div>
+    </section>
+  </div>
 </ion-content>
